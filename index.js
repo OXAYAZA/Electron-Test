@@ -1,17 +1,21 @@
 const { app, BrowserWindow } = require( 'electron' );
 
-function createWindow () {
+app.whenReady().then( function () {
 	// Создаем окно браузера.
+	// https://www.electronjs.org/docs/api/browser-window
 	let win = new BrowserWindow({
-		width: 800,
-		height: 600,
+		fullscreen: true,
 		webPreferences: {
 			nodeIntegration: true
 		}
 	});
 
-	// и загрузить index.html приложения.
+	// Загружаем index.html
 	win.loadFile( 'index.html' );
-}
 
-app.whenReady().then( createWindow );
+	// Убираем строку меню
+	win.removeMenu();
+
+	// Открываем инсрументы разработчика в отдельном окне
+	win.webContents.openDevTools({ mode: 'detach' });
+});
