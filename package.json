@@ -1,0 +1,22 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "Требуется иметь [Node.js](https://nodejs.org/) и [Git](https://git-scm.com/).",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OXAYAZA/Electron-Test.git"
+  },
+  "author": "OXAYAZA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OXAYAZA/Electron-Test/issues"
+  },
+  "homepage": "https://github.com/OXAYAZA/Electron-Test#readme",
+  "devDependencies": {
+    "electron": "^8.0.1"
+  }
+}
