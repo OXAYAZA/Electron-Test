@@ -4,7 +4,7 @@ app.whenReady().then( function () {
 	// Создаем окно браузера.
 	// https://www.electronjs.org/docs/api/browser-window
 	let win = new BrowserWindow({
-		fullscreen: true,
+		//fullscreen: true,
 		webPreferences: {
 			nodeIntegration: true
 		}
@@ -14,8 +14,8 @@ app.whenReady().then( function () {
 	win.loadFile( 'index.html' );
 
 	// Убираем строку меню
-	win.removeMenu();
+	//win.removeMenu();
 
 	// Открываем инсрументы разработчика в отдельном окне
-	win.webContents.openDevTools({ mode: 'detach' });
+	//win.webContents.openDevTools({ mode: 'detach' });
 });
